@@ -1,0 +1,1187 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #hero {
+    /* Centers button */
+    text-align: center;
+    /* changes on tablet */
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    /* prevents overflow from the lines extending past the screen width */
+    overflow: hidden;
+  }
+  #hero .cs-picture {
+    /* Background Image */
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #hero .cs-picture:before {
+    /* Black Color Overlay */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #hero .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes image act like a background-image */
+    object-fit: cover;
+  }
+  #hero .cs-container {
+    width: 100%;
+    max-width: 80em;
+    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+    /* 144px - 280px - leaving extra space for the navigation */
+    /* changes on tablet */
+    padding: clamp(9em, 25.95vw, 17.5em) 0;
+    margin: auto;
+    position: relative;
+  }
+  #hero .cs-container:before {
+    /* Left Line */
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #hero .cs-flex-group {
+    /* 60px - 220px */
+    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
+    margin: auto;
+    width: 80vw;
+    /* 464px - 562px */
+    max-width: clamp(29em, 60vw, 35.125em);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #hero .cs-topper {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 1.6vw, 1rem);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  #hero .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.9375rem, 6.4vw, 3.8125rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #hero .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    /* 40px - 48px */
+    margin-bottom: clamp(2.5rem, 4vw, 3rem);
+    color: #fff;
+    opacity: 1;
+  }
+  #hero .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #1a1a1a;
+    padding: 0;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color .3s;
+  }
+  #hero .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width .3s;
+  }
+  #hero .cs-button-solid:hover {
+    color: #fff;
+  }
+  #hero .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero .cs-button-transparent {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    /* 46px - 56px */
+    height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--bodyTextColorWhite);
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero .cs-button-transparent:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #000;
+    opacity: 1;
+    /* so it sits on top of the border */
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    transform-origin: left;
+    /* this is what creates the grow affect on hover */
+    transform: scaleX(0);
+    transition: transform .3s;
+  }
+  #hero .cs-button-transparent:hover:before {
+    transform: scaleX(1);
+  }
+  #hero .cs-button-transparent .cs-img {
+    display: block;
+    margin-right: 0.75rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #hero {
+    /* 32px - 40px */
+    padding: 0 clamp(2em, 5vw, 2.5em);
+  }
+  #hero .cs-container:after {
+    /* Right Line */
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+  }
+  #hero .cs-button-solid {
+    margin-bottom: 0;
+    margin-right: 1.25rem;
+  }
+}
+/* Desktop Parallax Effect - 1300px */
+@media only screen and (min-width: 81.25em) {
+  #hero {
+    background: url("/images/bathrrom.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* creates parallax effect on background image */
+    background-attachment: fixed;
+    /* remove img tag so we can make parallax work */
+  }
+  #hero .cs-picture img {
+    display: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #hero .cs-background:before {
+    opacity: .8;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #home-services {
+    /* 60px - 100px top and bottom */
+    padding: clamp(3.75em, 7.82vw, 6.25em) 0;
+  }
+  #home-services .container {
+    max-width: 66em;
+  }
+  #home-services .title {
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  #home-services .title:before {
+    transform: none;
+    left: 0;
+    bottom: -0.3125em;
+  }
+  #home-services .text {
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+    max-width: 21.875rem;
+  }
+  #home-services .services-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3em;
+  }
+  #home-services .services-group li {
+    list-style: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60vw;
+    max-height: 15.625rem;
+    font-size: clamp(1rem, 1.7vw, 1.5rem);
+    color: #fff;
+    padding: 1.125rem 1.75rem;
+  }
+  #home-services .services-group li .heading {
+    width: 50%;
+    display: block;
+    line-height: 1.2em;
+  }
+  #home-services .services-group li picture {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+  #home-services .services-group li picture:before {
+    /* top right box */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .3;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity .3s;
+  }
+  #home-services .services-group li picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 700px) {
+  #home-services .services-group {
+    flex-direction: row;
+  }
+  #home-services .services-group li {
+    height: 50vw;
+    max-height: 29.125rem;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #home-services .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #home-services .content-left {
+    flex: none;
+  }
+  #home-services .services-group {
+    margin: 0;
+    width: 100%;
+  }
+  #home-services .services-group li {
+    height: 35vw;
+    width: 33%;
+    max-width: 19.6875rem;
+  }
+  #home-services .services-group li picture {
+    overflow: hidden;
+  }
+  #home-services .services-group li picture img {
+    transition: transform .6s;
+  }
+  #home-services .services-group li:hover picture:before {
+    opacity: .7;
+  }
+  #home-services .services-group li:hover picture img {
+    transform: scale(1.2);
+  }
+}
+/*-- -------------------------- -->
+<---     Content Template       -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .sidebyside {
+    width: 100%;
+    max-width: 30.55em;
+    margin: auto;
+    padding-top: 3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebyside .left {
+    order: 2;
+    text-align: center;
+    max-width: 30.55em;
+  }
+  .sidebyside .left img {
+    display: none;
+  }
+  .sidebyside .left .title {
+    font-weight: 900;
+    font-size: min(9vw, 2.4em);
+    line-height: 1.20833333;
+    color: #1A1A1A;
+    position: relative;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .sidebyside .left .title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.0625em;
+    width: 1.515625em;
+    background: var(--primary);
+    opacity: 1;
+    bottom: -0.390625em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sidebyside .left ul li {
+    color: #292929;
+    opacity: .8;
+  }
+  .sidebyside .left p {
+    margin-bottom: 1.38888889em;
+    text-align: center;
+  }
+  .sidebyside .left p:last-of-type {
+    margin-bottom: 3.44444444em;
+  }
+  .sidebyside .right {
+    display: block;
+    width: 30.55em;
+    height: 30em;
+    position: relative;
+    font-size: min(1.6vw, .6em);
+    margin: auto;
+    order: 1;
+    margin-bottom: 15em;
+  }
+  .sidebyside .right:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50em;
+    background: var(--primary);
+    opacity: 1;
+    top: -5.35em;
+    bottom: -5.95em;
+    left: 17.6em;
+  }
+  .sidebyside .right:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 31.4em;
+    width: 39.8em;
+    background: url("../images/small-squares.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    top: -21.8em;
+    left: 5.75em;
+    z-index: -1;
+  }
+  .sidebyside .right img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .title {
+    font-weight: 700;
+    font-size: min(9vw, 2.4em);
+    line-height: 1.20833333;
+    color: #1A1A1A;
+    position: relative;
+    margin-bottom: 1.91666667em;
+    text-align: center;
+  }
+  .title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.0625em;
+    width: 1.515625em;
+    background: #EEBE76;
+    opacity: 1;
+    bottom: -0.390625em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+  }
+  body.dark-mode .sidebyside li {
+    color: #fff;
+    opacity: .9;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  .sidebyside {
+    max-width: 66.1em;
+    flex-direction: row;
+  }
+  .sidebyside .left {
+    order: 1;
+    text-align: left;
+    padding-right: 3.75em;
+  }
+  .sidebyside .left .title {
+    text-align: left;
+  }
+  .sidebyside .left .title:before {
+    font-size: inherit;
+    transform: none;
+    left: 0;
+  }
+  .sidebyside .left p {
+    text-align: left;
+  }
+  .sidebyside .right {
+    order: 2;
+    transform: translateY(6.2em);
+    font-size: min(1.6vw, .6em);
+  }
+  .title:before {
+    font-size: inherit;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1200px) {
+  .sidebyside {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .sidebyside .left {
+    padding: 0;
+  }
+  .sidebyside .right {
+    font-size: min(1.3vw, 1em);
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .sidebyside {
+    padding: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode .sidebyside .title {
+    color: #fff;
+  }
+  body.dark-mode .sidebyside .right:before {
+    background: var(--accessible);
+  }
+}
+/*-- -------------------------- -->
+<---        Construction        -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #construction,
+  #construction2 {
+    padding: 4.5em 0.8em 3em;
+  }
+  #construction .right:before,
+  #construction2 .right:before {
+    z-index: -100;
+    left: auto;
+    right: 17.6em;
+  }
+  #construction .right:after,
+  #construction2 .right:after {
+    top: -11.3em;
+    left: auto;
+    right: -5em;
+    width: 23em;
+    height: 25.8em;
+    background: url("/images/small-squares.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #construction .left p:last-of-type,
+  #construction2 .left p:last-of-type {
+    margin-bottom: 1.11111111em;
+  }
+  #construction .left ul,
+  #construction2 .left ul {
+    margin-bottom: 2.5em;
+  }
+  #construction .left ul li,
+  #construction2 .left ul li {
+    list-style: none;
+    position: relative;
+    text-align: left;
+  }
+  #construction .left ul li:before,
+  #construction2 .left ul li:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.83333333em;
+    width: 0.83333333em;
+    background: url("/images/check.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    top: 0.27777778em;
+    left: -1.38888889em;
+  }
+  #construction2 {
+    padding-bottom: 10em;
+    position: relative;
+    z-index: 100;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #construction,
+  #construction2 {
+    padding-top: 7.5em;
+  }
+  #construction .left ul,
+  #construction2 .left ul {
+    columns: 2;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #construction,
+  #construction2 {
+    max-width: 69.55em;
+    align-items: flex-start;
+  }
+  #construction .left,
+  #construction2 .left {
+    order: 2;
+    padding: 0;
+    padding-left: 2.5em;
+  }
+  #construction .right,
+  #construction2 .right {
+    order: 1;
+    margin-top: 0;
+    transform: none;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1200px) {
+  #construction .left,
+  #construction2 .left {
+    padding-left: 0;
+  }
+}
+/*-- -------------------------- -->
+<---          Structural         -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #structural {
+    padding-top: 4.5em;
+    padding-bottom: 3em;
+  }
+  #structural .right:after {
+    top: -11.35em;
+    left: -3.65em;
+    right: auto;
+    width: 23em;
+    height: 25.8em;
+    background: url("/images/small-squares.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #structural .left p:last-of-type {
+    margin-bottom: 1.11111111em;
+  }
+  #structural .left ul {
+    margin-bottom: 2.5em;
+  }
+  #structural .left ul li {
+    list-style: none;
+    position: relative;
+    text-align: left;
+  }
+  #structural .left ul li:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.83333333em;
+    width: 0.83333333em;
+    background: url("/images/check.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    top: 0.27777778em;
+    left: -1.38888889em;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1500px) {
+  #structural {
+    padding-top: 10em;
+    padding-bottom: 10em;
+    position: relative;
+    z-index: 10;
+  }
+  #structural .left {
+    padding-top: 3.75em;
+  }
+  #structural .right {
+    transform: none;
+  }
+}
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #cta-8361 {
+    /* Centers button */
+    text-align: center;
+    padding: clamp(60px, 9.5vw, 7.5em) 1rem clamp(60px, 9.5vw, 7.5em) 1rem;
+    position: relative;
+  }
+  #cta-8361 .container {
+    width: 100%;
+    max-width: 67.5em;
+    margin: auto;
+    position: relative;
+  }
+  #cta-8361 .cs-topper {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+    display: block;
+  }
+  #cta-8361 .cs-title {
+    /* 31px - 49px */
+    font-size: clamp(1.9375rem, 6.5vw, 3.0625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 44.5625rem;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+  }
+  #cta-8361 .cs-text {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 37.5rem;
+    margin: 2.25rem auto 2.25rem;
+    color: #fff;
+    opacity: 1;
+  }
+  #cta-8361 .cs-picture {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta-8361 .cs-picture:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #cta-8361 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/*-- -------------------------- -->
+<---           Reviews          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #reviews {
+    padding-top: 3.75em;
+    padding-bottom: 3.75em;
+    margin: auto;
+    text-align: center;
+  }
+  #reviews .container {
+    width: 96%;
+    max-width: 66em;
+  }
+  #reviews .title {
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  #reviews .title:before {
+    transform: none;
+    left: 0;
+  }
+  #reviews .review {
+    padding: 3.2em 1.5em 0.9em 1.5em;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 20.5em;
+    margin: auto;
+    margin-bottom: 5em;
+    border-radius: 0.25em;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  #reviews .review:first-of-type {
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    max-width: 22.0625rem;
+  }
+  #reviews .review:last-of-type {
+    margin-bottom: 0;
+  }
+  #reviews .review .profile {
+    display: block;
+    height: 4.95em;
+    width: 4.95em;
+    margin-left: 0;
+    border-radius: 50%;
+    margin-bottom: 0.8em;
+    position: absolute;
+    left: 1.5em;
+    top: -2.55em;
+  }
+  #reviews .review p {
+    line-height: 1.33333333;
+    margin-bottom: 1.55555556em;
+    text-align: left;
+  }
+  #reviews .review p.text {
+    margin-bottom: 3rem;
+    max-width: 18.1875rem;
+  }
+  #reviews .review .star-group {
+    border-top: 1px solid #E7E7E7;
+    padding-top: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: auto;
+  }
+  #reviews .review .star-group .name {
+    color: #1A1A1A;
+    font-size: 0.9em;
+    line-height: 1.33333333em;
+    text-align: left;
+    font-weight: bold;
+    display: block;
+  }
+  #reviews .review .star-group .desc {
+    color: #575757;
+    font-weight: 400;
+    display: block;
+  }
+  #reviews .review .star-group img {
+    display: block;
+    width: 4.55em;
+    height: 0.75em;
+    margin: 0;
+  }
+  #reviews .button-solid {
+    margin: 0;
+    display: block;
+    width: 10.5rem;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #reviews {
+    padding-top: 7.5em;
+    padding-bottom: 7.5em;
+  }
+  #reviews .container {
+    font-size: min(1.4vw, 1em);
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  #reviews .review {
+    margin: 0;
+  }
+  #reviews .review p {
+    text-align: left;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #reviews .review {
+    background: var(--medium);
+  }
+  body.dark-mode #reviews .review:nth-of-type(1) {
+    background-color: transparent;
+  }
+  body.dark-mode #reviews .review .name {
+    color: #fff;
+  }
+  body.dark-mode #reviews .review .desc {
+    color: #fff;
+    opacity: .7;
+  }
+}
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #services {
+    /* 60px - 100px top and bottom */
+    padding: clamp(3.75em, 7.82vw, 6.25em) 1em;
+  }
+  #services .cs-container {
+    width: 100%;
+    /* changes to 1280px on tablet */
+    max-width: 27.5em;
+    margin: auto;
+  }
+  #services .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  #services .cs-item {
+    list-style: none;
+    max-width: 26.6875rem;
+    /* padding left and right changes on tablet */
+    padding: 2.75rem 2rem;
+    background-color: #FFF5DF;
+    border-radius: 0.3125rem;
+    position: relative;
+    text-align: center;
+  }
+  #services .cs-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    background-color: var(--primary);
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 1.4em;
+  }
+  #services .cs-icon {
+    width: 2.75em;
+    height: auto;
+    display: block;
+  }
+  #services .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    color: var(--bodyTextColor);
+  }
+  #services .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #services .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    /* 48px - 64px */
+    margin-bottom: clamp(3rem, 6.3vw, 4rem);
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #services .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+  }
+  #services .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #services .cs-watermark {
+    display: none;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #services .cs-container {
+    max-width: 66.05em;
+    position: relative;
+  }
+  #services .cs-card-group {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.8em;
+  }
+  #services .cs-item {
+    width: 33.33%;
+    margin: 0;
+    /* makes each card the same height if you add or remove lines of text */
+    align-self: stretch;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #services .cs-item {
+    background-color: var(--medium);
+    border: none;
+  }
+  body.dark-mode #services .cs-item:before {
+    background: var(--accent);
+  }
+  body.dark-mode #services .cs-picture {
+    background-color: var(--accessible);
+  }
+  body.dark-mode #services .cs-h3,
+  body.dark-mode #services .cs-item-text {
+    color: #FAFBFC;
+  }
+}
+/*-- -------------------------- -->
+<---        Get It Done         -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #cta {
+    position: relative;
+    padding: 3.75em 0;
+  }
+  #cta:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta .container {
+    text-align: center;
+  }
+  #cta picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+  #cta picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #cta .title {
+    color: #fff;
+    margin-bottom: 1.10416667em;
+  }
+  #cta p {
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    margin: auto;
+    margin-bottom: 4.22222222em;
+    width: 96%;
+    max-width: 33.22222222em;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #cta {
+    padding: 8.4em 0;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  #cta:before {
+    display: none;
+  }
+  #cta:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 55.4em;
+    width: 100em;
+    background: url("../images/cta-squares.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -3;
+  }
+  #cta .container {
+    width: 90.0625%;
+    margin: auto;
+  }
+  #cta picture {
+    width: 90.0625%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #cta picture:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #cta:after {
+    background: url("../images/cta-squares-dark.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,266 @@
+/*-- -------------------------- -->
+<---          Landing           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #hero {
+    font-size: inherit;
+    padding-bottom: 13.5em;
+    padding-top: 7.5em;
+    position: relative;
+    z-index: 1;
+  }
+  #hero:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .65;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  #hero picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -11;
+  }
+  #hero picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #hero .hero-content {
+    width: 96%;
+    max-width: 57.2em;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+  #hero .hero-content {
+    padding: 0;
+  }
+  #hero .heroText {
+    width: 100%;
+    margin: auto;
+    max-width: 45.5em;
+  }
+  #hero h1 {
+    font-weight: bold;
+    font-size: min(11vw, 3.2em);
+    color: #fff;
+    text-align: center;
+    line-height: 1.203125;
+    margin-right: auto;
+    width: 100%;
+    max-width: 14.21875em;
+    margin-bottom: 1.4375em;
+    position: relative;
+  }
+  #hero h1:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.0625em;
+    width: 1.515625em;
+    background: var(--primary);
+    opacity: 1;
+    bottom: -0.25em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #hero p {
+    font-size: 1em;
+    line-height: 1.55em;
+    margin: auto;
+    margin-bottom: 1.55em;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    max-width: 30.85em;
+    opacity: 1;
+  }
+  #hero .button-solid {
+    margin: auto;
+    display: inline-block;
+    width: auto;
+  }
+  #hero .call-now {
+    height: 2.94444444em;
+    width: 9.11111111em;
+    font-size: 0.9em;
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    margin: 0;
+  }
+  #hero .call-now img {
+    display: inline-block;
+    width: 1.16666667em;
+    height: 1.16666667em;
+  }
+  #hero .call-now .dark {
+    display: none;
+  }
+  #hero .call-now span {
+    display: block;
+  }
+  #hero .call-now .text {
+    font-size: 0.6em;
+    line-height: 1.16666667;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+  #hero .call-now .number {
+    font-weight: bold;
+    line-height: 1.16666667;
+    font-size: 1em;
+  }
+  #hero .business-casual {
+    display: none;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #hero {
+    padding: 6.15em 0 11.45em 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #hero .hero-content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  #hero .business-casual {
+    display: block;
+    width: 17.5em;
+    position: absolute;
+    right: 0;
+    top: -3.5em;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+  #hero {
+    padding-top: 13.65em;
+    padding-bottom: 15.35em;
+    background: url("../images/landing.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #hero picture {
+    display: none;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .services {
+    border-radius: 0.25em;
+    margin: auto;
+    margin-top: -8.35em;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    width: 90%;
+    max-width: 66em;
+    padding: 2.5em 1em;
+    border-top: 0.3em solid var(--primary);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  }
+  .services .card {
+    display: block;
+    width: 100%;
+    max-width: 17.85em;
+    margin: auto;
+    margin-bottom: 2.5em;
+  }
+  .services .card:last-of-type {
+    margin-bottom: 0;
+  }
+  .services .card picture {
+    background: var(--primary);
+    width: 4.4em;
+    height: 4.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1.15em;
+    border-radius: 50%;
+  }
+  .services .card picture img {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  .services .card h2,
+  .services .card h3 {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.35em;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 0.65em;
+    text-transform: uppercase;
+  }
+  .services .card p {
+    text-align: center;
+    color: #000;
+    font-size: 0.9em;
+    line-height: 1.33333333em;
+    width: 100%;
+    opacity: .7;
+  }
+}
+/* Inbetween */
+@media only screen and (min-width: 768px) {
+  .services {
+    font-size: min(1.8vw, 1em);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 98%;
+  }
+  .services .card {
+    margin: 0;
+    max-width: 16.25em;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  .services {
+    padding: 2.5em 4em;
+  }
+  .services .card {
+    max-width: 17.85em;
+  }
+}
+/* Dark mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #services {
+    background: var(--medium);
+  }
+  body.dark-mode #services picture {
+    background: var(--tint);
+  }
+  body.dark-mode #services h2 {
+    color: #fff;
+    font-weight: bold;
+  }
+}
